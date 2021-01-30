@@ -6,3 +6,5 @@ We are limited to the python installation within our very, very old Solaris 10 o
 We decided to pull the data for all users, parse it to JSON and push it into Elasticsearch; as a result, we can retrieve the data in numerous ways and retrieve and individual user's information in less then .7 seconds in > 20,000 records.
 
 In a new system we're standing up, we're using Red Hat Linux and for the moment, I'm using the default 2.7 until we fully define the software baseline and can update to Python 3.
+
+Constructive criticism is welcomed.
