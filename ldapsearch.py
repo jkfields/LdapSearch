@@ -35,8 +35,3 @@ class LdapSearch:
         else:
             raise InvalidLdapSeachCommandException("{rtncode}::{msg}".format(rtn_code=__rtncode,
                                                                              msg= __err)
-        
-    @static
-    def dtToIso(dt):
-        pass
-        
