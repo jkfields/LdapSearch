@@ -25,4 +25,5 @@ class LdapSearch:
         
     @static
     def dtToIso(dt):
+        pass
         
