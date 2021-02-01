@@ -1,4 +1,5 @@
 """
+.. codeauthor:: Jeffrey Fields <jkfields@yahoo.com>
 """
 
 import platform
