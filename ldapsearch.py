@@ -7,7 +7,7 @@ from subprocess import Popen, PIPE
 
 # TODO:  push these to config file
 LINUX_CMD = "/bin/ldapsearch -LLL -o ldif-wrap=no -xH {url} -b {dn} {filter} {attrs}"
-SOL_CMD = "/usr/bin/ldapsearch -T -x -h {url} -b {dn} {filter} {attrs}"
+SOL_CMD = "/usr/bin/ldapsearch -T -1 -h {url} -b {dn} {filter} {attrs}"
 
 class InvalidLdapSearchCommandException(Exception):
     pass
