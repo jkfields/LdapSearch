@@ -32,7 +32,7 @@ class LdapSearch:
         __rtncode = __proc.returncode
         
         if __rtncode == 0:
-            return __outo
+            return __out
         else:
             raise InvalidLdapSeachCommandException("{rtncode}::{msg}".format(rtn_code=__rtncode,
                                                                              msg= __err)
