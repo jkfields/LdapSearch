@@ -39,7 +39,7 @@ class LdapSearch:
         elif
             self.ldapsearch = LINUX_CMD
         else:
-            msg = "{0} is not a supported system".fort(self.system)
+            msg = "{0} is not a supported system".format(self.system)
             raise LdapSearchError(msg)
 
 
@@ -71,11 +71,11 @@ class LdapSearch:
             
         except  Exception as ex:
             out = ""
-            msg = "Execution failed; return code: {0}.   {1}.format(rtncode, str(ex))
+            msg = "Execution failed; return code: {0}.  {1}.format(rtncode, str(ex))
             raise ShellExecutionError(msg)
             
         else:
-            if __rtncode == 0:
+            if rtncode == 0:
                 return out
             else:
                 msg = "Execution failed; return code: {0}.   {1}.format(rtncode, err)
