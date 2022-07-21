@@ -65,7 +65,7 @@ class LdapSearch:
     @staticmethod
     def shex(cmd):
         try:
-            proc = Popen(__cmd.split(), shell=False, stdout=PIPE, stderr=PIPE)
+            proc = Popen(cmd.split(), shell=False, stdout=PIPE, stderr=PIPE)
             out, err = proc.communicate()
             rtncode = proc.returncode
             
