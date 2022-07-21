@@ -2,7 +2,7 @@
 .. codeauthor:: Jeffrey Fields <jkfields@yahoo.com>
 """
 
-import platform
+from platform import system
 from subprocess import Popen, PIPE
 
 # TODO:  push these to config file
@@ -27,7 +27,8 @@ class ShellExecutionError(Exception):
 
 
 class LdapSearch:
-    system = platform.system().lower()
+    # platform.system()
+    system = system().lower()
 
 
     def __init__(self, host, port=389):
