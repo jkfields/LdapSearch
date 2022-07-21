@@ -71,18 +71,19 @@ class LdapSearch:
             
         except  Exception as ex:
             out = ""
-            msg = "Execution failed; return code: {0}.  {1}.format(rtncode, str(ex))
-            raise ShellExecutionError(msg)
+            errmsg = "Execution failed; return code: {0}; {1}".format(rtncode, str(ex))
+            raise ShellExecutionError(errmsg)
             
         else:
             if rtncode == 0:
                 return out
             else:
-                msg = "Execution failed; return code: {0}.   {1}.format(rtncode, err)
-                raise ShellExecutionError(msg)
+                errmsg = "Execution failed; return code: {0}; {1}".format(rtncode, err)
+                raise ShellExecutionError(errmsg)
+
 
 if __name__ == "__main__":
-    ls = LdapSearch(HOST, PORT)
+    ls = LdapSearch(DEFAULT_HOST, DEFAULT_PORT)
     ls.search(DEFAULT_BASEDN, DEFAULT_FILTER, DEFAULT_ATTRS)
     
     print(ls.ldif)
