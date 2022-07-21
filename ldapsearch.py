@@ -39,8 +39,8 @@ class LdapSearch:
         elif
             self.ldapsearch = LINUX_CMD
         else:
-            msg = "{0} is not a supported system".format(self.system)
-            raise LdapSearchError(msg)
+            errmsg = "{0} is not a supported system".format(self.system)
+            raise LdapSearchError(errmsg)
 
 
     def __str__(self):
@@ -49,7 +49,7 @@ class LdapSearch:
 
 
     def search(self, dn=DEFAULT_BASEDN, filter=DEFAULT_FILTER, attrs=DEFAULT_ATTRS):
-       if self.system == "sunos":
+        if self.system == "sunos":
            cmd = self.ldapsearch.format(host=self.host,
                                         dn=dn,
                                         filter=filter,
