@@ -4,7 +4,7 @@ from pprint import PrettyPrinter
 import re
 
 # regular expression patter for a blank line (Windows or *nix/Linux)
-BLANK_LINE = re.compile(r"(?:\r?\n{2,}")
+BLANK_LINE = re.compile(r"(?:\r?\n){2,}")
 
 
 class SplitOnBlankLineError(Exception):
