@@ -14,7 +14,7 @@ class SplitOnBlankLineError(Exception):
 
 class LdifParser:
     users = []
-    
+
     
     def __init__(self, ldiftext):
         self.ldiftext = ldiftext
@@ -27,7 +27,8 @@ class LdifParser:
         records = LdifParser.split_on_blank_line(self.ldiftext)
         for record in records:
             self.parse_ldif(record)
-            
+    
+    
     def parse_ldif(self, rec):
         '''
         Parse each record from the block of text
@@ -56,6 +57,7 @@ class LdifParser:
             # user = dict(attr for item in atters for attr in item.iteritems())
             
             self.users.append(user)
+
             
     @staticmethod
     def parse_line(ln):
@@ -89,12 +91,14 @@ class LdifParser:
         
       # return a dictionary representing the attribute
       return dict(attr, value)
+
     
     @staticmethod
     def convert_datetime(dtstr, dtformat="%Y%m%d%H%M%S"):
         # parse and process the datetime string
         return datetime.strptime("dtstr[:14].strftime("%Y-%m-%dT%H:%M:%SZ")
 
+                                 
     @staticmethod
     def split_on_blank_line(textstr):
         '''
