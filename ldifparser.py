@@ -54,7 +54,7 @@ class LdifParser:
             user.update(attr)
 
             # works, but doesn't deal with duplicates
-            # user = dict(attr for item in atters for attr in item.iteritems())
+            # user = dict(attr for item in attrs for attr in item.iteritems())
             
             self.users.append(user)
 
