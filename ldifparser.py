@@ -96,7 +96,7 @@ class LdifParser:
     @staticmethod
     def convert_datetime(dtstr, dtformat="%Y%m%d%H%M%S"):
         # parse and process the datetime string
-        return datetime.strptime("dtstr[:14].strftime("%Y-%m-%dT%H:%M:%SZ")
+        return datetime.strptime(dtstr[:14], dtformat).strftime("%Y-%m-%dT%H:%M:%SZ")
 
                                  
     @staticmethod
