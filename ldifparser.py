@@ -77,7 +77,7 @@ class LdifParser:
       # convert "true/false", etc to boolean
       elif value.lower() in TRUE_FALSE:
           # evaluates to false if not in the list of values to equate to "true"
-          value  = valuer.lower() in TRUE
+          value  = value.lower() in TRUE
           
       # "pwdAccountLockedTime" contains an invalid date "0000010000Z"; convert 
       # to boolean and change the attribute name accordingly.  The presence of 
